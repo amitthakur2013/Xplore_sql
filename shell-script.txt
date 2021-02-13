@@ -58,3 +58,18 @@ then
 else
     echo "Retry!!"
 fi 
+
+
+#Program to check type of triangle :
+read X
+read Y 
+read Z 
+if [ $X = $Y -a $Y = $Z ]
+then 
+echo "EQUILATERAL"
+elif [ $X = $Y -a $Y -ne $Z ] || [ $Y = $Z -a $X -ne $Y ] || [ $X = $Z -a $Y -ne $X ]
+then 
+echo "ISOSCELES"
+else 
+echo "SCALENE"
+fi 
