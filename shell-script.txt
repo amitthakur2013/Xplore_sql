@@ -1,0 +1,8 @@
+#To add/multiply/aub/divide two numbers
+echo "Enter a"
+read a 
+echo "Enter b"
+read b 
+c=`expr $a \* $b`
+#c=$((a*b))
+echo "Result: $c"
