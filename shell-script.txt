@@ -27,10 +27,23 @@ c=`echo - | awk '{print sin('$b')}'`
 echo "Result:$c"
 
 
-#Program to bind power that is base raise to radix
+#Program to find power that is base raise to radix
 echo "Enter base"
 read a 
 echo "Enter radix"
 read b 
 c=`echo - | awk '{print '$a' ^ '$b'}'`
 echo "Result : $c"
+
+#Simple if greater than -gt illustration:
+echo "Enter a Number : \c"
+read n 
+if [ $n -gt 200 ]
+then
+    echo "Done"
+elif [ $n -gt 100 ]
+then
+    echo "oops!"
+else
+    echo "Retry!!"
+fi
