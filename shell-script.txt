@@ -167,3 +167,18 @@ f=$((f * n))
 n=$((n-1))
 done
 echo "Result : $f"
+
+
+
+#Compute the average Hackerrank
+read n
+tot=$n
+sum=0
+while [ $n -gt 0 ]
+do
+read a 
+sum=$((sum+a))
+n=$((n-1)) 
+done 
+res=`echo "scale=3; $sum / $tot" | bc`
+echo $res
