@@ -6,3 +6,9 @@ read b
 c=`expr $a \* $b`
 #c=$((a*b))
 echo "Result: $c"
+
+#To add/multiply/aub/divide two numbers using awk command
+echo "Enter a Number"
+read a 
+c=`echo - | awk '{print '$a' + '$a'}'`
+echo "Result:$c"
