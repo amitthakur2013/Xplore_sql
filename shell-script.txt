@@ -12,3 +12,9 @@ echo "Enter a Number"
 read a 
 c=`echo - | awk '{print '$a' + '$a'}'`
 echo "Result:$c"
+
+#Find Square root using awk
+echo "Enter a Number"
+read a 
+c=`echo - | awk '{print sqrt('$a')}'`
+echo "Result:$c"
