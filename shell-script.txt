@@ -47,3 +47,14 @@ then
 else
     echo "Retry!!"
 fi
+
+
+#Illustration of and operator with if:
+echo "Enter a number"
+read n 
+if [ $n -gt 99 ] && [ $n -lt 201 ]
+then 
+    echo "Great Done !!"
+else
+    echo "Retry!!"
+fi 
