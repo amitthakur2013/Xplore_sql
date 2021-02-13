@@ -102,3 +102,18 @@ echo $sum
 echo $sub 
 echo $mul 
 echo $div 
+
+
+
+#Vowel Checking
+echo "Enter the character!"
+read a 
+if [ `echo $a | wc -c` -eq 2 ]
+then
+    if [ $a = a -o $a = e -o $a = i -o $a = o -o $a = u -o $a = A -o $a = E -o $a = I -o $a = O -o $a = U ]
+    then echo "Vowel!!"
+    else echo "Consonant!!"
+    fi 
+else
+    echo "More than 1 charcter entered! Retry!!"
+fi
