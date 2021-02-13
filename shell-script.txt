@@ -27,3 +27,10 @@ c=`echo - | awk '{print sin('$b')}'`
 echo "Result:$c"
 
 
+#Program to bind power that is base raise to radix
+echo "Enter base"
+read a 
+echo "Enter radix"
+read b 
+c=`echo - | awk '{print '$a' ^ '$b'}'`
+echo "Result : $c"
