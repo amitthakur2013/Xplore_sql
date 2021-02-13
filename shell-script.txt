@@ -18,3 +18,12 @@ echo "Enter a Number"
 read a 
 c=`echo - | awk '{print sqrt('$a')}'`
 echo "Result:$c"
+
+#Find sin value of degree
+echo "Enter Degree"
+read a 
+b=`echo - | awk '{print (('$a'*3.14159)/180)}'`
+c=`echo - | awk '{print sin('$b')}'`
+echo "Result:$c"
+
+
