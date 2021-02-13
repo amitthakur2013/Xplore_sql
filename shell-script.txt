@@ -182,3 +182,12 @@ n=$((n-1))
 done 
 res=`echo "scale=3; $sum / $tot" | bc`
 echo $res
+
+
+
+
+#for loop illustration 
+for i in `seq 1 1 5`
+do 
+    echo "Hello World $i" 
+done
