@@ -153,3 +153,17 @@ echo $c
 c=`expr $c - 1`
 #c=$((c-1))
 done
+
+
+
+
+#Program to calculate the factorial of a number 
+echo "Enter a number whose factorial is to be found!!"
+read n 
+f=1
+while [ $n -gt 0 ]
+do 
+f=$((f * n))
+n=$((n-1))
+done
+echo "Result : $f"
