@@ -117,3 +117,26 @@ then
 else
     echo "More than 1 charcter entered! Retry!!"
 fi
+
+
+
+
+
+#Vowel Checking using case 
+echo "Enter the Character"
+read c 
+case $c in 
+[aeiou] | [AEIOU])
+                    echo "Vowel Present!!"
+                    ;;
+[a-z] | [A-Z])
+                    echo "Consonant!!"
+                    ;;
+[0-9])
+                    echo "Number"
+                    ;;
+?)                 echo "Special Character!!"
+                    ;;
+*)
+                    echo "More than one character!!"
+esac
