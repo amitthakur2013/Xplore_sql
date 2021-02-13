@@ -140,3 +140,16 @@ case $c in
 *)
                     echo "More than one character!!"
 esac
+
+
+
+
+
+#Simple while loop illustration to print 10 consecutive numbers
+c=10
+while [ $c -gt 0 ]
+do 
+echo $c
+c=`expr $c - 1`
+#c=$((c-1))
+done
