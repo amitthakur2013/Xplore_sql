@@ -88,3 +88,17 @@ echo "X is less than Y"
 else
 echo "X is equal to Y"
 fi
+
+
+
+#Hackerrank World of Numbers
+read a
+read b 
+sum=$((a+b))
+sub=$((a-b))
+mul=$((a*b))
+div=$((a/b))
+echo $sum 
+echo $sub 
+echo $mul 
+echo $div 
