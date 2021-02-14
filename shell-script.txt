@@ -191,3 +191,28 @@ for i in `seq 1 1 5`
 do 
     echo "Hello World $i" 
 done
+
+
+
+#Prime Number Check 
+echo "Enter The Number:-"
+read n 
+if [ $n -eq 1 ]
+then
+    echo "Not Prime"
+else 
+    i=2
+    f=0 
+    for i in `seq 2 1 $((n-1))`
+    do 
+        if [ $((n % i)) -eq 0 ]
+        then 
+            f=1 
+            break 
+        fi
+    done 
+    if [ $f -eq 0 ]
+    then echo "Prime No"
+    else echo "Not Prime No"
+    fi 
+fi
