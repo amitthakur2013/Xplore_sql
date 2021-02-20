@@ -216,3 +216,26 @@ else
     else echo "Not Prime No"
     fi 
 fi
+
+
+#Check validity of input using regular expression
+valid=0
+while [ $valid -eq 0 ]
+do
+    read -p "Enter your name and age: " NAME AGE
+    if [[ ( -z $NAME ) || ( -z $AGE ) ]]
+    then
+        echo "Parameters for Name or Age can't be empty ! pls try again"
+        continue
+    elif [[ ! $NAME =~ ^[a-zA-Z]+$ ]]
+    then 
+        echo "Name should contain only characters!"
+        continue
+    elif [[ ! $AGE =~ ^[0-9]+$ ]]
+    then 
+        echo "Age should contain only numeric value!"
+        continue
+    fi
+    valid=1
+done
+echo "Name: $NAME and Age: $AGE"
