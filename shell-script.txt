@@ -239,3 +239,7 @@ do
     valid=1
 done
 echo "Name: $NAME and Age: $AGE"
+
+
+to count words
+awk '{print $0}' $* | head -n 3 | wc -w
