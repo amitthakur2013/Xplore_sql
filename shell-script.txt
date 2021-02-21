@@ -264,3 +264,10 @@ then
 fi 
 done 
 echo "Total = $sum"
+
+
+
+#print max score
+max=0
+ans=""
+awk -F " " '{ if (max < $3 && NR > 1) { max=$3 ; ans=$2 } } END { print ans }' $*
