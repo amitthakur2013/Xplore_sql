@@ -243,3 +243,24 @@ echo "Name: $NAME and Age: $AGE"
 
 to count words
 awk '{print $0}' $* | head -n 3 | wc -w
+
+
+
+
+
+
+
+#To count sum if no is even
+read n 
+count=0
+sum=0
+while [ $count -le $n ]
+do 
+read a 
+count=$((count+1))
+if [ $((a % 2)) -eq 0 ]
+then 
+    sum=$((sum+a))
+fi 
+done 
+echo "Total = $sum"
