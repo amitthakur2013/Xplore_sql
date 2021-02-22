@@ -303,3 +303,17 @@ awk -F "|" '
     }
 }
 ' employee.txt
+
+
+
+
+
+awk -F ";" '
+{
+    print $0; 
+    if ( $3 ~ /[Hh][iI][mM]/ )
+    { 
+        print "--> To be removed !" 
+    }
+}
+' $*
