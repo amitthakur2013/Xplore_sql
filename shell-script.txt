@@ -362,3 +362,8 @@ awk -F " " '
 
 #Multiple patterns with grep command
 grep -w -i "the\|then\|that\|those" $*
+
+
+
+#Repeated digits with space
+grep "\([0-9]\)\s*\1" $*
