@@ -317,3 +317,9 @@ awk -F ";" '
     }
 }
 ' $*
+
+
+
+
+# Count Occurenc eof word unix
+awk '{print $0}' $* | grep -o "[uU][nN][iI][xX]" | wc -l
