@@ -185,6 +185,19 @@ echo $res
 
 
 
+#Determin pass fail with awk command
+awk -F " " '
+{
+    if ( $2 >= 50 && $3 >=50 && $4 >= 50 ) 
+    {
+        print $1" : Pass"
+    }
+    else 
+    {
+        print $1" : Fail"
+    }
+}' $*
+
 
 #for loop illustration 
 for i in `seq 1 1 5`
