@@ -357,3 +357,8 @@ awk -F " " '
         print $0" : FAIL"
     }
 }' $*
+
+
+
+#Multiple patterns with grep command
+grep -w -i "the\|then\|that\|those" $*
