@@ -367,3 +367,27 @@ grep -w -i "the\|then\|that\|those" $*
 
 #Repeated digits with space
 grep "\([0-9]\)\s*\1" $*
+
+
+
+#Find the average using awk commmand
+awk '
+{
+    if ( NR == 1 )
+    {
+        n=$1
+    }
+    else
+    {
+        s+=$1
+    }
+}
+    END
+    {
+        printf "%.3f\n",s/n
+    }
+
+' $*
+
+
+
