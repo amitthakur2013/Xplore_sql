@@ -336,3 +336,24 @@ awk -F ";" '
 
 # Count Occurenc eof word unix
 awk '{print $0}' $* | grep -o "[uU][nN][iI][xX]" | wc -l
+
+
+
+
+#Determine grade of the student using awk command
+awk -F " " '
+{
+    avg=($2+$3+$4)/3
+    if ( avg >= 80 )
+    {
+        print $0" : A"
+    }
+    else if ( avg >= 60 && avg < 80 )
+    {
+        print $0" : B"
+    }
+    else
+    {
+        print $0" : FAIL"
+    }
+}' $*
