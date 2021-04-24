@@ -1,0 +1,54 @@
+class Boutique:
+  def __init__(self, boutiqueid, boutiquename, boutiquetype, boutiquerating, points):
+    self.boutiqueid=boutiqueid
+    self.boutiquename=boutiquename
+    self.boutiquetype=boutiquetype
+    self.boutiquerating=boutiquerating
+    self.points=points
+
+class OnlineBoutique:
+  def __init__(self, boutiqueDict):
+    self.boutiqueDict=boutiqueDict
+
+  def getboutique(self,lr,ur,p,t):
+    ans=[]
+    for i in self.boutiqueDict.keys():
+      if i.lower()==t.lower():
+        for item in self.boutiqueDict[i]:
+          if item.boutiquerating <= ur and item.boutiquerating >= lr:
+            item.points+=p
+          ans.append(item)
+    if len(ans) ==0:
+      return None
+    else:
+      return ans
+
+n=int(input())
+d={}
+key=[]
+for _ in range(n):
+  id=int(input())
+  name=input()
+  ty=input()
+  rate=float(input())
+  points=int(input())
+  new_obj=Boutique(id,name,ty,rate,points)
+  if ty not in key:
+    d[ty]=[]
+    d[ty].append(new_obj)
+  else:
+    d[ty].append(new_obj)
+  key.append(ty)
+
+lr=float(input())
+ur=float(input())
+p=int(input())
+t=input()
+on_bout=OnlineBoutique(d)
+ans=on_bout.getboutique(lr,ur,p,t)
+if ans is None:
+  print("No boutique found")
+else:
+  ans.sort(key=lambda x:x.points,reverse=True)
+  for item in ans:
+    print(item.boutiqueid,item.boutiquename,item.points)
